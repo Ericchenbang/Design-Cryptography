@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Message Receiver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>隱藏訊息提取工具</h2>
+
+    <label for="receivedText">貼上收到的訊息:</label><br>
+    <div id="receivedText" contenteditable="true" ></div>
+    
+    <br><br>
+    
+    <button id="transformer" onclick="extractHiddenMessage()">提取隱藏訊息</button>
+
+    <h3>隱藏訊息:</h3>
+    <p id="hiddenMessage"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+body {
+    background-color: bisque;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;            
+}
+
+.boldChange {
+    font-weight: bold;
+}
+.fontChange {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sizeChange {
+    font-size: 17.5px;
+}
+
+#originalText {
+    border: 2.5px solid black;
+    padding: 5px;
+    width: 500px;
+    height: 100px;
+    resize: vertical; 
+}
+#hiddenMessage {
+    border: 2.5px solid black;
+    padding: 5px;
+    width: 500px;
+    height: 100px;
+    resize: vertical; 
+}
+
+#result {
+    border: 2px solid black;
+    padding: 5px;
+    width: 500px;
+    height: auto;
+}
+
+#transformer {
+    width: 200px;
+    height: 50px;
+    border:0;
+    background-color:#f89bde;
+    color:#111010;
+    border-radius:10px;
+    font-weight: bolder;
+    font-size: 16px;
+    font-stretch: expanded;
+}
+#transformer:hover {
+    background-color: rgb(142, 183, 241);
+    cursor: pointer;
+}
+
+#copyButton {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(227, 188, 166);
+}    

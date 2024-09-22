@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Message with Options</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>隱藏訊息工具</h2>
+
+    <label for="originalText">原始訊息:</label><br>
+    <div id="originalText" contenteditable="true"></div><br><br>
+
+    <label for="hiddenMessage">隱藏訊息:</label><br>
+    <div id="hiddenMessage" contenteditable="true"></div><br><br>
+
+    <label for="hideOption">選擇隱藏訊息的方式:</label><br>
+    <input type="radio" id="boldOption" name="hideOption" value="bold" checked> 粗體<br>
+    <input type="radio" id="fontOption" name="hideOption" value="font"> 改變字體<br>
+    <input type="radio" id="sizeOption" name="hideOption" value="size"> 改變字體大小<br><br>
+    
+    <button id="transformer" onclick="generateHiddenMessage()">產生隱藏訊息</button>
+
+    <h3>結果:</h3>
+    <p id="result"></p>
+    <script src="script.js"></script>
+</body>
+</html>
