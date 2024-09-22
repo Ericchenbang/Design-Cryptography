@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Message Receiver</title>
+
+    <style>
+        body {
+            background-color: bisque;
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+            
+        }
+
+        #receivedText {
+            border: 2.5px solid black; 
+            padding: 10px; 
+            width: 500px; 
+            height: 100px; 
+            resize: vertical;
+        }
+
+        #transformer {
+            width: 200px;
+            height: 50px;
+            border:0;
+            background-color:#f89bde;
+            color:#111010;
+            border-radius:10px;
+            font-weight: bolder;
+            font-size: 16px;
+            font-stretch: expanded;
+        }
+        #transformer:hover {
+            background-color: rgb(142, 183, 241);
+            cursor: pointer;
+        }
+
+        #hiddenMessage{
+            border: 2px solid black;
+            padding: 5px;
+            width: 500px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>隱藏訊息提取工具</h2>
+
+    <label for="receivedText">貼上收到的訊息:</label><br>
+    <div id="receivedText" contenteditable="true" ></div>
+    
+    <br><br>
+    
+    <button id="transformer" onclick="extractHiddenMessage()">提取隱藏訊息</button>
+
+    <h3>隱藏訊息:</h3>
+    <p id="hiddenMessage"></p>
+
+    <script>
+        function extractHiddenMessage() {
+            let receivedText = document.getElementById('receivedText').innerHTML;
+
+            let lastChar = receivedText.trim().slice(-1);
+
+            let styleType = '';
+            if (lastChar === '.') {
+                styleType = 'font-weight: bold;';
+            } else if (lastChar === '~') {
+                styleType = 'font-family: Arial, Helvetica, sans-serif;';
+            } else if (lastChar === '!') {
+                styleType = 'font-size: 17.5px;';
+            }
+
+            let hiddenMessage = '';
+            let parser = new DOMParser();
+            let doc = parser.parseFromString(receivedText, 'text/html');
+            let spans = doc.querySelectorAll('span');
+            
+            spans.forEach(span => {
+                if (span.getAttribute('style') === styleType) {
+                    hiddenMessage += span.textContent;
+                }
+            });
+
+            document.getElementById('hiddenMessage').textContent = hiddenMessage;
+        }
+    </script>
+</body>
+</html>
