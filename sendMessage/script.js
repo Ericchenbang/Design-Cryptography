@@ -19,6 +19,10 @@ function generateHiddenMessage() {
                 spanClass = 'fontChange';
             } else if (hideOption === 'size') {
                 spanClass = 'sizeChange';
+            } else if (hideOption === 'color') {
+                spanClass = 'colorChange';
+            } else if (hideOption === 'margin') {
+                spanClass = 'marginChange';
             }
 
             resultHTML += `<span class="${spanClass}">${currentChar}</span>`;
@@ -34,6 +38,10 @@ function generateHiddenMessage() {
         resultHTML += '~';
     } else if (hideOption === 'size') {
         resultHTML += '!';
+    } else if (hideOption === 'color') {
+        resultHTML += '_';
+    } else if (hideOption === 'margin') {
+        resultHTML += '\'';
     }
 
     document.getElementById('result').innerHTML = resultHTML;

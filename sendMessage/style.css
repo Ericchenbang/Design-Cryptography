@@ -13,6 +13,12 @@ body {
 .sizeChange {
     font-size: 17.5px;
 }
+.colorChange {
+    color: rgb(25, 25, 48);
+}
+.marginChange {
+    margin: 0.1px;
+}
 
 #originalText {
     border: 2.5px solid black;

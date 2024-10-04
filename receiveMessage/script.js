@@ -3,6 +3,8 @@ function extractHiddenMessage() {
 
             let lastChar = receivedText.trim().slice(-1);
 
+            let hiddenMessage = '';
+
             let styleType = '';
             if (lastChar === '.') {
                 styleType = 'font-weight: bold;';
@@ -10,9 +12,15 @@ function extractHiddenMessage() {
                 styleType = 'font-family: Arial, Helvetica, sans-serif;';
             } else if (lastChar === '!') {
                 styleType = 'font-size: 17.5px;';
+            } else if (lastChar === '_') {
+                styleType = 'color: rgb(25, 25, 48);';
+            } else if(lastChar === '\'') {
+                styleType = 'margin: 0.1px;';  
+            } else {
+                hiddenMessage = "There is no hidden Message!";
             }
 
-            let hiddenMessage = '';
+
             let parser = new DOMParser();
             let doc = parser.parseFromString(receivedText, 'text/html');
             let spans = doc.querySelectorAll('span');
