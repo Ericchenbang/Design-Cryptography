@@ -8,17 +8,23 @@
 </head>
 
 <body>
-    <h2>隱藏訊息提取工具</h2>
+    <div class="container">
+        <h2>隱藏訊息提取工具</h2>
 
-    <label for="receivedText">貼上收到的訊息:</label><br>
-    <div id="receivedText" contenteditable="true" ></div>
-    
-    <br><br>
-    
-    <button id="transformer" onclick="extractHiddenMessage()">提取隱藏訊息</button>
+        <div class="section">
+            
+            <label for="receivedText">收到的訊息:</label><br>
+            
+            <div id="receivedText" contenteditable="true"></div>
+        </div>
 
-    <h3>隱藏訊息:</h3>
-    <p id="hiddenMessage"></p>
+        <div class="section">
+            <button id="transformer" onclick="extractHiddenMessage()">提取隱藏訊息</button>
+        </div>
+
+        <h3>隱藏訊息:</h3>
+        <p id="hiddenMessage"></p>
+    </div>
 
     <script src="script.js"></script>
 </body>

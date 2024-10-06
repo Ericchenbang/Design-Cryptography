@@ -23,6 +23,9 @@ function generateHiddenMessage() {
                 spanClass = 'colorChange';
             } else if (hideOption === 'margin') {
                 spanClass = 'marginChange';
+            } else if (hideOption === 'nothing') {
+                resultHTML = originalText;
+                break;
             }
 
             resultHTML += `<span class="${spanClass}">${currentChar}</span>`;
@@ -42,6 +45,8 @@ function generateHiddenMessage() {
         resultHTML += '_';
     } else if (hideOption === 'margin') {
         resultHTML += '\'';
+    } else if (hideOption === 'nothing') {
+        resultHTML += ' ^ ^';
     }
 
     document.getElementById('result').innerHTML = resultHTML;

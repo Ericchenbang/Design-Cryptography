@@ -16,7 +16,9 @@ function extractHiddenMessage() {
                 styleType = 'color: rgb(25, 25, 48);';
             } else if(lastChar === '\'') {
                 styleType = 'margin: 0.1px;';  
-            } else {
+            } else if(lastChar === '^') {
+                hiddenMessage = receivedText.slice(0, receivedText.length - 3);
+            }else {
                 hiddenMessage = "There is no hidden Message!";
             }
 

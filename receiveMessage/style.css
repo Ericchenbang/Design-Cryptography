@@ -1,37 +1,59 @@
 body {
-            background-color: bisque;
-            font-size: 18px;
-            font-family: 'Times New Roman', Times, serif;
-            
-        }
+    background-color: #f7f1e3;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 20px;
+}
 
-        #receivedText {
-            border: 2.5px solid black; 
-            padding: 10px; 
-            width: 500px; 
-            height: 100px; 
-            resize: vertical;
-        }
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
 
-        #transformer {
-            width: 200px;
-            height: 50px;
-            border:0;
-            background-color:#f89bde;
-            color:#111010;
-            border-radius:10px;
-            font-weight: bolder;
-            font-size: 16px;
-            font-stretch: expanded;
-        }
-        #transformer:hover {
-            background-color: rgb(142, 183, 241);
-            cursor: pointer;
-        }
+h2 {
+    text-align: center;
+    color: #333;
+}
 
-        #hiddenMessage{
-            border: 2px solid black;
-            padding: 5px;
-            width: 500px;
-            height: auto;
-        }
+.section {
+    margin-bottom: 20px;
+}
+
+#receivedText {
+    border: 2px solid #333;
+    padding: 10px;
+    width: 97%;
+    height: 100px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+#hiddenMessage {
+    border: 2px solid #333;
+    padding: 10px;
+    width: 97%;
+    min-height: 50px;
+    margin-top: 10px;
+}
+
+#transformer {
+    width: 100%;
+    padding: 10px;
+    background-color: #6c5ce7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#transformer:hover {
+    background-color: #a29bfe;
+    cursor: pointer;
+}

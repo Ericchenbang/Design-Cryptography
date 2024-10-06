@@ -1,65 +1,85 @@
 body {
-    background-color: bisque;
+    background-color: #f7f1e3;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
-    font-family: 'Times New Roman', Times, serif;            
+    margin: 0;
+    padding: 20px;
 }
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.section {
+    width: 97%;
+    margin-bottom: 20px;
+}
+
+#originalText, #hiddenMessage {
+    border: 2px solid #333;
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+#result {
+    border: 2px solid #333;
+    padding: 10px;
+    width: 97%;
+    min-height: 50px;
+    margin-top: 10px;
+}
+
+#transformer {
+    width: 100%;
+    padding: 10px;
+    background-color: #6c5ce7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#transformer:hover {
+    background-color: #a29bfe;
+    cursor: pointer;
+}
+
 
 .boldChange {
     font-weight: bold;
 }
+
 .fontChange {
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .sizeChange {
     font-size: 17.5px;
 }
+
 .colorChange {
     color: rgb(25, 25, 48);
 }
+
 .marginChange {
     margin: 0.1px;
 }
 
-#originalText {
-    border: 2.5px solid black;
-    padding: 5px;
-    width: 500px;
-    height: 100px;
-    resize: vertical; 
+.nothingChange {
+    font-weight:normal;
 }
-#hiddenMessage {
-    border: 2.5px solid black;
-    padding: 5px;
-    width: 500px;
-    height: 100px;
-    resize: vertical; 
-}
-
-#result {
-    border: 2px solid black;
-    padding: 5px;
-    width: 500px;
-    height: auto;
-}
-
-#transformer {
-    width: 200px;
-    height: 50px;
-    border:0;
-    background-color:#f89bde;
-    color:#111010;
-    border-radius:10px;
-    font-weight: bolder;
-    font-size: 16px;
-    font-stretch: expanded;
-}
-#transformer:hover {
-    background-color: rgb(142, 183, 241);
-    cursor: pointer;
-}
-
-#copyButton {
-    font-size: 16px;
-    font-weight: bold;
-    background-color: rgb(227, 188, 166);
-}    

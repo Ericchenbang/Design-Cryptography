@@ -7,25 +7,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>隱藏訊息工具</h2>
+    <div class="container">
+        <h2>隱藏訊息工具</h2>
 
-    <label for="originalText">原始訊息:</label><br>
-    <div id="originalText" contenteditable="true"></div><br><br>
+        <div class="section">
+            <label for="originalText">原始訊息:</label><br>
+            <div id="originalText" contenteditable="true"></div>
+        </div>
 
-    <label for="hiddenMessage">隱藏訊息:</label><br>
-    <div id="hiddenMessage" contenteditable="true"></div><br><br>
+        <div class="section">
+            <label for="hiddenMessage">隱藏訊息:</label><br>
+            <div id="hiddenMessage" contenteditable="true"></div>
+        </div>
 
-    <label for="hideOption">選擇隱藏訊息的方式:</label><br>
-    <input type="radio" id="boldOption" name="hideOption" value="bold" checked> 粗體<br>
-    <input type="radio" id="fontOption" name="hideOption" value="font"> 改變字體<br>
-    <input type="radio" id="sizeOption" name="hideOption" value="size"> 改變字體大小<br>
-    <input type="radio" id="colorOption" name="hideOption" value="color"> 改變字體顏色<br>
-    <input type="radio" id="marginOption" name="hideOption" value="margin"> 改變字體間隔<br><br>
-    
-    <button id="transformer" onclick="generateHiddenMessage()">產生隱藏訊息</button>
+        <div class="section">
+            <label for="hideOption">選擇隱藏訊息的方式:</label><br>
+            <input type="radio" id="boldOption" name="hideOption" value="bold" checked> 改變成粗體<br>
+            <input type="radio" id="fontOption" name="hideOption" value="font"> 改變字體<br>
+            <input type="radio" id="sizeOption" name="hideOption" value="size"> 改變大小<br>
+            <input type="radio" id="colorOption" name="hideOption" value="color"> 改變顏色<br>
+            <input type="radio" id="marginOption" name="hideOption" value="margin"> 改變間隔<br>
+            <input type="radio" id="nothingOption" name="hideOption" value="nothing"> 什麼都不改OWO<br><br>
+        </div>
 
-    <h3>結果:</h3>
-    <p id="result"></p>
+        <div class="section">
+            <button id="transformer" onclick="generateHiddenMessage()">產生隱藏訊息</button>
+        </div>
+
+        <h3>結果:</h3>
+        <p id="result"></p>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
