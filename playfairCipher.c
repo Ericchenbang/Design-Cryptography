@@ -7,18 +7,28 @@
 int findXY(char cipher[][CSIZE], char target);
 
 int main(void){
+	// The 5*5 table.
 	char cipher[CSIZE][CSIZE];
+	// Count which alphabet is lost.
+	int counter[CSIZE * CSIZE];
 	printf("Please input the playfair cipher: \n");
 	for (int i = 0; i < CSIZE; i++){
 		for (int j = 0; j < CSIZE; j++){
 			scanf("%c", &cipher[i][j]);
+			counter[cipher[i][j] - 65]++;
 		}
 		getchar();
 	}
 
 	char lastAlpha, shareAlpha;
-	printf("Please input the last alphabet and which alphabet's position share with it: ");
-	scanf("%c %c", &lastAlpha, &shareAlpha);
+	for (int i = 0; i < CSIZE*CSIZE; i++){
+		if (counter[i] != 1){
+			lastAlpha = i + 65;
+			break;
+		}
+	}
+	printf("Please input the alphabet's share the position with lost one: ");
+	scanf("%c", &shareAlpha);
 
 	char plaintext[PSIZE], ans[PSIZE];
 	printf("Please input the plain-text: ");
